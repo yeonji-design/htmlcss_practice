@@ -4,25 +4,47 @@
     <meta charset="utf-8">
    
     <!-- ADD requirements for favicon, stylesheets, and any other meta-data. -->
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/starter.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/logo-drk.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>New Company Inc.</title>
+
+    <script>
+      window.onload = function() {
+        document.getElementById("skiptocontent").focus();
+      };
+    </script>
+
   </head>
   <body>
      <!-- Add Skip To Content -->
+     <a href="" class="skip" id="skiptocontent">Skip To Content</a>
     <header>
       <img src="images/logo-drk.png" alt="logo" id = "logo">
-      <nav>
+      <nav class="navbar">
         <!-- Add links -->
         <ul class="nav_links">
-          <li><a>About</a></li>
-          <li><a href=>Method</a></li>
-          <li><a>Clients</a></li>
-          <li><a>Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
   </header>
    
-    <main class="container">
-      
+  <main class="container">
+    
+    <div class="bg-intro parallax">
+      <img src="images/header.jpg" alt=""/>
+    </div>
+
     <div id="main" class = "intro">
       <h1>New Company Inc.</h1>
       <p>Creating a better workspace by transforming the office paradigm. We're helping employees make their mark on the world through effective workspace management.</p>
@@ -65,7 +87,7 @@
     </div>
   </main>
     <footer>
-      <p>University of Michigan School of Information </p>
+      <p><a href="https://www.si.umich.edu/">University of Michigan School of Information </a></p>
       <ul> <li>
         &copy; Colleen van Lent, Drew Asselin</li><li> Web Design 2019-2020</li></ul>
     </footer>

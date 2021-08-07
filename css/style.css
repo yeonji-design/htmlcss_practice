@@ -3,3 +3,364 @@
 /*Some selectors you may need include are
 a.skip, header, .nav_links, .container,
 .intro, html, .text-block, etc.*/
+
+a.skip {
+    position: absolute;
+    top: -40px;
+}
+
+a.skip:focus {
+    position: absolute;
+    top: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_links>li>a:hover, .nav_links>li>a:focus{
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    color: #50C7C7;
+}
+
+.nav_links li {
+    padding-bottom: 5px;
+}
+
+@media (min-width: 750px) and (max-width: 1125px) {
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav_links li {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1125px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav_links li {
+        padding: 10px;
+    }
+}
+
+@keyframes logo-animation {
+    from {width: 0px;}
+    to {width: 50px;}
+  }
+  
+header img {
+animation-name: logo-animation;
+animation-duration: 1s;
+}
+
+@media (min-width: 1125px) {
+    @keyframes logo-animation {
+        0%      {width: 50px; left: 0px;}
+        50%     {width: 150px; left: 450px;}
+        100%    {width: 50px; left: 0px;}
+    }
+    header img {
+        animation-name: logo-animation;
+        animation-duration: 1s;
+    }
+}
+
+.container {
+    width: 100%;
+    display: grid;    
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 15px;
+}
+
+.parallax {
+    /* The image used 
+    background-image: url("images/header.jpg");*/
+  
+    /* Set a specific height */
+    height: 400px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-intro {
+    grid-row: 1;  
+    grid-column: 1 / span 3;
+}
+
+.intro {
+    grid-row: 1;
+    grid-column: 2;
+    color: white;
+}
+
+/*
+.container p {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}*/
+
+.container img {
+    max-height: 700px;
+}
+
+.text-block {
+    justify-self: center;
+    align-self: center;
+}
+
+.about-image {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+}
+
+.about {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.method-image {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+}
+
+.method {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.clients-image {
+    grid-row: 4;
+    grid-column: 1 / span 3;
+}
+
+.clients {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+.contact-image {
+    grid-row: 5;
+    grid-column: 1 / span 3;
+}
+
+.contact {
+    grid-row: 5;
+    grid-column: 2;
+}
+
+@media (min-width: 750px) and (max-width: 1125px) {
+    .container {
+        width: 100%;
+        display: grid;    
+        grid-template-columns: 50px auto 500px auto 50px;
+        grid-template-rows: 400px 400px 400px 400px 400px;
+        row-gap: 15px;
+    }
+    .container img {
+        min-width: 100%;
+    }
+    
+    .bg-intro {
+        grid-row: 1;  
+        grid-column: 1 / span 5;
+        overflow: hidden;
+    }
+    
+    .intro {
+        grid-row: 1;
+        grid-column: 2 / span 3;
+        color: white;
+    }
+    .about-image {
+        grid-row: 2;
+        grid-column: 2 / span 2;
+        overflow: hidden;
+    }
+    
+    .about {
+        grid-row: 2;
+        grid-column: 3 / span 2;
+    }
+    
+    .method-image {
+        grid-row: 3;
+        grid-column: 3 / span 2;
+        overflow: hidden;
+    }
+    
+    .method {
+        grid-row: 3;
+        grid-column: 2 / span 2;
+    }
+    
+    .clients-image {
+        grid-row: 4;
+        grid-column: 2 / span 2;
+        overflow: hidden;
+    }
+    
+    .clients {
+        grid-row: 4;
+        grid-column: 3 / span 2;
+    }
+    
+    .contact-image {
+        grid-row: 5;
+        grid-column: 3 / span 2;
+        overflow: hidden;
+    }
+    
+    .contact {
+        grid-row: 5;
+        grid-column: 2 / span 2;
+    }
+}
+
+@media (min-width: 1125px) {
+    .container {
+        width: 100%;
+        display: grid;    
+        grid-template-columns: 15px 75px 1fr 25px 1fr 75px 15px;
+        grid-template-rows: 400px 400px 400px;
+        row-gap: 15px;
+    }
+    .container img {
+        width: 100%;
+    }
+    .text-block {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .bg-intro {
+        grid-row: 1;  
+        grid-column: 1 / span 7;
+        overflow: hidden;
+    }
+    
+    .intro {
+        grid-row: 1;
+        grid-column: 3 / 6;
+        color: white;
+    }
+    .about-image {
+        grid-row: 2;
+        grid-column: 2 / 7;
+        overflow: hidden;
+    }
+    
+    .about {
+        grid-row: 2;
+        grid-column: 3;
+    }
+    
+    .method-image {
+        display: none;
+    }
+    
+    .method {
+        grid-row: 2;
+        grid-column: 5;
+    }
+    
+    .clients-image {
+        grid-row: 3;
+        grid-column: 2 / 7;
+        overflow: hidden;
+    }
+    
+    .clients {
+        grid-row: 3;
+        grid-column: 3;
+    }
+    
+    .contact-image {
+        display: none;
+    }
+    
+    .contact {
+        grid-row: 3;
+        grid-column: 5;
+    }
+}
+
+footer a {
+    color: white;
+}
+
+@media (prefers-reduced-motion) {
+    header img {
+      animation-name: dissolve;
+    }
+    a.skip:focus, a.skip {
+        transition: none;
+        -webkit-transition: none;
+    }
+    .nav_links a {
+        transition: none;
+        -webkit-transition: none;
+        animation-duration: none;
+    }
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto;
+      }
+
+    .nav_links a {
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    }
+    
+    html::-webkit-scrollbar {
+        width: 0px; /* For Chrome, Safari, and Opera */
+    }
+    /*parallax*/
+}
+
+@media print {
+    img {
+        display: none;
+    }
+    #logo {
+        display:initial;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_links li {
+        padding: 0 40px;
+    }
+
+    .text-block, .container, .intro, .parallax {
+        height: initial;
+        min-height: initial;
+        max-height: initial;
+    }
+}
