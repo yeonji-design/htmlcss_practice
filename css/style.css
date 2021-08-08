@@ -92,8 +92,8 @@ animation-duration: 1s;
 }
 
 .parallax {
-    /* The image used 
-    background-image: url("images/header.jpg");*/
+    /* The image used */
+    background-image: url("images/header.jpg");
   
     /* Set a specific height */
     height: 400px;
